@@ -63,36 +63,39 @@ if (opcion == "1") {
     console.log(rptotal);
     alert(rptotal);
 } else {
-    var pal = prompt("Introduce una palabra y te indicare si empieza o acaba en 's' ");
-    function comp1() {
-        if (pal[0] == 's' || pal[0] == 'S') {
-            var rp1 = "La palabra empieza con s";
-            console.log(rp1);
-        } else {
-            var rep1 = "La palabra No empieza con s";
-            console.log(rp1);
+    if (opcion == "2") {
+        var pal = prompt("Introduce una palabra y te indicare si empieza o acaba en 's' ");
+        function comp1() {
+            if (pal[0] == 's' || pal[0] == 'S') {
+                var rp1 = "La palabra empieza con s";
+                console.log(rp1);
+            } else {
+                var rep1 = "La palabra No empieza con s";
+                console.log(rp1);
+            }
+            return rp1;
         }
-        return rp1;
-    }
-    comp1();
-    function comp2() {
-        if (pal[pal.length - 1] == 's' || pal[pal.length - 1] == 'S') {
-            var rp2 = "La palabra acaba con s";
-            console.log(rp2);
-        } else {
-            var rp2 = "La palabra No acaba con s";
-            console.log(rp2);
+        comp1();
+        function comp2() {
+            if (pal[pal.length - 1] == 's' || pal[pal.length - 1] == 'S') {
+                var rp2 = "La palabra acaba con s";
+                console.log(rp2);
+            } else {
+                var rp2 = "La palabra No acaba con s";
+                console.log(rp2);
+            }
+            return rp2;
         }
-        return rp2;
+        comp2();
+        let rptotal = [];
+        rptotal.push(comp1());
+        rptotal.push(comp2());
+        console.log(rptotal);
+        alert(rptotal);
     }
-    comp2();
-    let rptotal = [];
-    rptotal.push(comp1());
-    rptotal.push(comp2());
-    console.log(rptotal);
-    alert(rptotal);
+    else {
+        alert("no has introducido 1 o 2");
+    }
 }
-
-
 
 
